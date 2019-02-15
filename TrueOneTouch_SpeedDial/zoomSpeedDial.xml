@@ -1,0 +1,11 @@
+﻿<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>oneTouchZoomDial_PID</PanelId>
+    <Type>Home</Type>
+    <Icon>Camera</Icon>
+    <Order>1</Order>
+    <Color>#07C1E4</Color>
+    <Name>Zoom</Name>
+  </Panel>
+</Extensions>
