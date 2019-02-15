@@ -1,0 +1,11 @@
+﻿<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>panel_1</PanelId>
+    <Type>Home</Type>
+    <Icon>Handset</Icon>
+    <Order>1</Order>
+    <Name>Share Screen</Name>
+      <Options>hideRowNames=1</Options>
+  </Panel>
+</Extensions>

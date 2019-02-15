@@ -1,0 +1,59 @@
+﻿<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>panel_2</PanelId>
+    <Type>Home</Type>
+    <Icon>Tv</Icon>
+    <Order>1</Order>
+    <Color>#FFB400</Color>
+    <Name>Share In-room PC</Name>
+    <Page>
+      <Name>Sharing In-room PC</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>text</WidgetId>
+          <Name>Tap screen to close this window.</Name>
+          <Type>Text</Type>
+          <Options>size=4;align=center;fontSize=normal</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_2</WidgetId>
+          <Name>Stop Sharing</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <PageId>source2</PageId>
+      <Options>hideRowNames=1</Options>
+    </Page>
+  </Panel>
+  <Panel>
+    <PanelId>panel_1</PanelId>
+    <Type>Home</Type>
+    <Icon>Laptop</Icon>
+    <Order>2</Order>
+    <Color>#07C1E4</Color>
+    <Name>Share Laptop</Name>
+    <Page>
+      <Name>Sharing Laptop</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>text</WidgetId>
+          <Name>Tap screen to close this window.</Name>
+          <Type>Text</Type>
+          <Options>size=4;align=center;fontSize=normal</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_1</WidgetId>
+          <Name>Stop Sharing</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <PageId>source3</PageId>
+      <Options>hideRowNames=1</Options>
+    </Page>
+  </Panel>
+</Extensions>
