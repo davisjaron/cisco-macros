@@ -8,13 +8,20 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
     }
 });
 
+xapi.event.on('UserInterface Message TextInput Clear', (event) => {
+  if(event.FeedbackId === 'PIN' && event.Text !== pin) {
+    xapi.command('UserInterface Extensions Panel Close');
+  }
+})
+
 function showPinPad(text){
   xapi.command('UserInterface Message TextInput Display', {
     Title: 'Enter PIN',
     Text: 'A PIN is required to put these rooms into combined mode.',
     InputType: 'PIN',
     KeyboardState: 'Open',
-    Duration: '0' 
+    Duration: '0',
+    FeedbackId: 'PIN'
   })
   .then(checkPinMatch);
 }
