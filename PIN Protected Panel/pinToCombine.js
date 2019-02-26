@@ -9,10 +9,22 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
 });
 
 xapi.event.on('UserInterface Message TextInput Clear', (event) => {
-  if(event.FeedbackId === 'PIN' && event.Text !== pin) {
+  if(event.FeedbackId === 'FID_PIN' && event.Text !== pin) {
     xapi.command('UserInterface Extensions Panel Close');
+    console.log('User backed out of pin prompt');
   }
 })
+
+xapi.event.on('UserInterface Message TextInput Response', (event) => {
+    if(event.Text === pin){
+      xapi.command('UserInterface Message TextInput Clear');
+      console.log('User Entered: ' + event.Text);
+    }
+    if(event.Text !== pin) {
+      xapi.command('UserInterface Extensions Panel Close');
+      console.log('User Entered ' + event.Text + ' which is incorrect.');
+    }
+  });
 
 function showPinPad(text){
   xapi.command('UserInterface Message TextInput Display', {
@@ -21,18 +33,6 @@ function showPinPad(text){
     InputType: 'PIN',
     KeyboardState: 'Open',
     Duration: '0',
-    FeedbackId: 'PIN'
+    FeedbackId: 'FID_PIN'
   })
-  .then(checkPinMatch);
-}
-	
-function checkPinMatch(event) {
-  xapi.event.on('UserInterface Message TextInput Response', (event) => {
-    if(event.Text === pin){
-      xapi.command('UserInterface Message TextInput Clear');
-    }
-    if(event.Text !== pin) {
-      xapi.command('UserInterface Extensions Panel Close');
-    }
-  });
 }
