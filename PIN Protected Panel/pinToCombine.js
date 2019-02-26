@@ -1,5 +1,17 @@
 const xapi = require('xapi');
 
+/*
+Written by Jaron Davis - 2/26/2019
+
+Purpose:
+This macro allows you to password protect specific panels on a touch 10 so that users canot make changes without knowing the pin.  
+This prevents random users from making unauthorized changes.
+
+Important Notes:
+- This js file references specific panel IDs from the associated XML file.
+*/
+
+
 const pin = '12345';
 
 xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
@@ -21,7 +33,11 @@ xapi.event.on('UserInterface Message TextInput Response', (event) => {
       console.log('User Entered: ' + event.Text);
     }
     if(event.Text !== pin) {
-      xapi.command('UserInterface Extensions Panel Close');
+      xapi.command('UserInterface Message TextLine Display', {
+        Text: 'PIN Incorrect, Please Try Again',
+        Duration: 3,
+      });
+      showPinPad();
       console.log('User Entered ' + event.Text + ' which is incorrect.');
     }
   });
