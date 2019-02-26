@@ -1,0 +1,40 @@
+﻿<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>Divisible_Room_Control_PanelID</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Sliders</Icon>
+    <Order>1</Order>
+    <Color>#A866FF</Color>
+    <Name>Divisible Room Control</Name>
+    <Page>
+      <Name>Divisible Room Control</Name>
+      <Row>
+        <Name>Mode Selection</Name>
+        <Widget>
+          <WidgetId>widget_selection</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>Room1</Key>
+              <Name>Room 1 Only</Name>
+            </Value>
+            <Value>
+              <Key>Combined</Key>
+              <Name>Combined</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+        <Widget>
+          <WidgetId>text</WidgetId>
+          <Name>Please be aware that putting the system into combined mode utilizes the speakers and microphones in both rooms.</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=normal;align=center</Options>
+        </Widget>
+      </Row>
+      <PageId>Divisible_Room_Control_PageID</PageId>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>
