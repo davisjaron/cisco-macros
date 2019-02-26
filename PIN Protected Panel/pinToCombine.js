@@ -3,7 +3,7 @@ const xapi = require('xapi');
 const pin = '12345';
 
 xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
-    if(event.PanelId == 'Divisible_Room_Control_PanelID'){
+    if(event.PanelId === 'Divisible_Room_Control_PanelID'){
       showPinPad();
     }
 });
