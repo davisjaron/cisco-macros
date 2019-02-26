@@ -1,6 +1,5 @@
 const xapi = require('xapi');
 
-var pinEntered = '';
 const pin = '12345';
 
 xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
