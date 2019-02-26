@@ -4,7 +4,7 @@ const pin = '12345';
 
 xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
     if(event.PanelId == 'Divisible_Room_Control_PanelID'){
-      showPinPad('Enter Divisible Room Control PIN');
+      showPinPad();
     }
 });
 
