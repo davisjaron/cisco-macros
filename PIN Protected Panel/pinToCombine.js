@@ -9,6 +9,7 @@ This prevents random users from making unauthorized changes.
 
 Important Notes:
 - This js file references specific panel IDs from the associated XML file.
+- Requires CE 9.6 - 9.6 implements feedback ID in response to backing out of the panel.
 */
 
 
